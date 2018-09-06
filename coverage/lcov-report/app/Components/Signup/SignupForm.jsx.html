@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app\Components\Signup\SignupForm.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">app/Components/Signup/</a> SignupForm.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">89.74% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>35/39</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">86.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>13/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">89.74% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>35/39</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-yes">26×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">23×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component, Fragment } from 'react';
+import {
+    ControlLabel, FormGroup, FormControl, Button,
+} from 'react-bootstrap';
+import { Field, reduxForm } from 'redux-form';
+import './Signup.scss';
+import history from '../../history';
+import logofavicon from '../../../assets/Images/overstock_favicon.png';
+&nbsp;
+export const validate = (values) =&gt; {
+    const error = {};
+    /* eslint max-len: ["error", { "ignoreRegExpLiterals": true }] */
+    const emailPattern = /^(([^&lt;&gt;()[\]\\.,;:\s@"]+(\.[^&lt;&gt;()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const emailPasswordPattern = /^[a-zA-Z0-9]{8,16}$/g;
+    const validEmail = emailPattern.test(values.email);
+    // eslint-disable-next-line
+    const validPwd = emailPasswordPattern.test(values.password);
+    if (!values.email) {
+        error.email = 'Required';
+    } else if (!validEmail) {
+        error.email = 'Please Enter a Valid Email';
+    }
+&nbsp;
+    if (!values.password) {
+        error.password = 'Required';
+    } else if (values.password.length &lt; 8) {
+        error.password = 'Password should be greater than 8';
+    } else if (values.password.length &gt; 15) {
+        error.password = 'Password should be lesser than 16';
+    }
+    return error;
+};
+&nbsp;
+&nbsp;
+/* eslint-disable react/prop-types */
+export const renderField = ({
+    label, type, input,
+    meta: { touched, error },
+}) =&gt; (
+    &lt;Fragment&gt;
+        &lt;FormGroup className="formRowWrap"&gt;
+            &lt;ControlLabel className="labelTxt"&gt;
+                {label}
+            &lt;/ControlLabel&gt;
+            &lt;FormControl
+                {...input}
+                type={type}
+                autoComplete="off"
+                className="inputTxtStyle" /&gt;
+            {touched &amp;&amp; (error &amp;&amp; (
+                &lt;span className="errorTxt"&gt;
+                    {error}
+                &lt;/span&gt;
+            ))}
+        &lt;/FormGroup&gt;
+    &lt;/Fragment&gt;);
+&nbsp;
+class SignupForm extends Component {
+    componentDidMount() {
+        // document.addEventListener('keydown', this.escFunction, false);
+    }
+&nbsp;
+    // onSubmitCall = (values) =&gt; {
+    //     const { email } = values;
+    //     const qualifiedGovId = ['.gov', '.mil', '.state', '.edu'];
+    //     let getDomain = email.substring(email.lastIndexOf('.'));
+    //     getDomain = getDomain.toLowerCase();
+    //     if (qualifiedGovId.includes(getDomain)) {
+    //         history.push('/gov');
+    //     } else {
+    //         history.push('/com');
+    //     }
+    // }
+&nbsp;
+    // escFunction(event) {
+    //     if (event.keyCode === 32) {
+    //         event.preventDefault();
+    //     }
+    // }
+&nbsp;
+    render() {
+        const { handleSubmit } = this.props;
+&nbsp;
+        const handlePagesOnSubmit = (values) =&gt; {
+            const { email } = values;
+            const qualifiedGovId = ['.gov', '.mil', '.state', '.edu'];
+            let getDomain = email.substring(email.lastIndexOf('.'));
+            getDomain = <span class="cstat-no" title="statement not covered" >getDomain.toLowerCase();</span>
+            if (<span class="cstat-no" title="statement not covered" >qualifiedGovId.includes(getDomain)) {</span>
+                history.<span class="cstat-no" title="statement not covered" >push('/gov');</span>
+            } else {
+                history.<span class="cstat-no" title="statement not covered" >push('/com');</span>
+            }
+        };
+        return (
+&nbsp;
+            &lt;div className="formWrap"&gt;
+                &lt;h1 className="signupTitle_1"&gt;
+                    &lt;img src={logofavicon} alt="" /&gt;
+                    &lt;br/&gt;
+                    New to Overstock professional? Sign Up.
+                &lt;/h1&gt;
+                &lt;form onSubmit={handleSubmit(handlePagesOnSubmit)}&gt;
+                    &lt;Field
+                        name="email"
+                        component={renderField}
+                        type="text"
+                        label="Email"/&gt;
+                    &lt;Field
+                        name="password"
+                        component={renderField}
+                        type="password"
+                        label="Create Password"/&gt;
+                    &lt;div className="form-group formRowWrap"&gt;
+                        &lt;Button
+                            type="submit"
+                            className="btnBlueStyle createAccBtn"&gt;
+                        Create Account
+&nbsp;
+                        &lt;/Button&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+                &lt;p className="signInTxt"&gt;
+                    Already a member of Overstock Professional?
+                    &lt;a onClick={() =&gt; history.push('/login')}&gt;Sign In &lt;/a&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+        );
+    }
+}
+&nbsp;
+export default reduxForm({
+    form: 'SignupForm',
+    validate,
+})(SignupForm);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Sep 04 2018 20:28:47 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

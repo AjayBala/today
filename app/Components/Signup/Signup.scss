@@ -1,0 +1,148 @@
+/*******************************/
+@import "../../Style.scss";
+
+.bgStyle{
+    @extend %fullWrap;
+    background-image: url(../../../assets/Images/Login.png);
+    background-size: cover;
+    min-height: calc(100vh - 258px);
+    background-repeat: no-repeat;
+    padding-bottom: 70px;
+}
+
+.bannerTitle_1{ 
+  @extend %fullWrap;
+  @extend %textAlignCenter;
+  @include paddingAll(10px);
+  @include titleHevNeu(46px, #fff, 60px);
+  @include marginTopBottom(20px);
+} 
+
+.formWrap{
+  @extend %fullWrap;
+  @include paddingAll(30px);
+  max-width: 450px; background-color:#fff; box-sizing:border-box; margin-top:20px;
+
+  form{
+    @extend %fullWrap;
+  }
+
+  .signupTitle_1{
+    @include paraHev_fluid(18px, #000, 22px);
+    @include paddingAll(5px);
+    @extend %centerAlignWrap;
+    margin-bottom: 10px;
+    img{
+      height:32px; margin-bottom: 8px;
+    }
+  }
+
+}
+
+.createAccBtn{
+  @extend %fullWrap;
+  @extend %btnBlueStyle;
+  @include borderRadius(2px);
+  
+  &:hover{
+    background-color: #333;
+    color: #fff;
+  }
+}
+
+.signInTxt{
+  @include paraHev_fluid(14px, #000, 22px);
+  @include paddingAll(0px);
+  @include marginAll(0px);
+  @extend %fullWrap;
+  @extend %textAlignCenter;
+  padding-top: 0px;
+  a:hover{ 
+    color:#ff1f2c; 
+    text-decoration: none;
+  }
+}
+
+
+.tablewrap{
+  @extend %fullWrap;
+  @extend %right;
+  margin-top:60px;
+  max-width: 480px;
+  table{
+    @extend %fullWrap;
+
+    th, td {
+      @include paraHev_fluid(12px, #444, 20px);
+      background-color: white;
+      border: 0.1px solid #a6a6d3;
+      border-collapse: collapse; 
+      width: 100%;
+      padding: 6px 10px;
+      float: none;
+      
+    }
+  }
+  .arrowColHead{ 
+    position: relative;
+    &:before{ 
+      position: absolute; 
+      content: ""; 
+      left:0px; 
+      top: 53px;
+      width: 0;
+      height: 0;
+      border-left: 49px solid transparent;
+      border-right: 48px solid transparent;
+      border-top: 20px solid #034078;
+    }
+  }
+}
+
+.tick{
+  @include tick(red);
+}
+.tick1{
+  @include tick(blue);
+}
+.cross{
+  &:before {
+    content: "\2717";
+    color: gray;
+    font-weight:bolder;
+  }
+}
+
+// PASSWORD VALIDATION STYLING
+
+#messagePwd { 
+  display: none;
+  padding: 15px 0px;
+      font-size: 14px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: #4A90E2;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  // content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: grey;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  // content: "✔";
+}
+
+.errorClass {
+  color: red;
+}
